@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+
+import Header from "./components/Header.js";
+import RecipeList from "./components/RecipeList.js";
+import Sidebar from "./components/Sidebar.js";
 
 function App() {
+  const [urlParams, setUrlParams] = React.useState();
+  const [formData, setFormData] = React.useState({
+    diet: [],
+    health: [],
+    cuisineType: [],
+    mealType: [],
+    dishType: [],
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Header />
+        <Sidebar
+          formData={formData}
+          setFormData={setFormData}
+          setUrlParams={setUrlParams}
+        />
+        <RecipeList urlParams={urlParams} />
+      </div>
+    </BrowserRouter>
   );
 }
 

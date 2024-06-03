@@ -1,0 +1,25 @@
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 300px;
+  width: 300px;
+}
+
+img,
+p {
+  width: 100%;
+}
+
+img {
+  height: 100%;
+  position: absolute;
+}
+
+p {
+  background-color: #3c6f41b2;
+  font-size: 20px;
+  position: relative;
+  top: -15px;
+  color: white;
+}
