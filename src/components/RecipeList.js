@@ -59,8 +59,8 @@ export default function RecipeList({ urlParams }) {
   }
 
   return (
-    <div>
-      <div className="recipe-list">{mapRecipeList()}</div>
+    <div className="recipe-list">
+      <div className="recipes">{mapRecipeList()}</div>
     </div>
   );
 }

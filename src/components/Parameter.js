@@ -1,4 +1,5 @@
 import React from "react";
+import "./Parameter.css";
 
 export default function Parameter({
   parameterArr,
@@ -63,7 +64,7 @@ export default function Parameter({
   }
 
   return (
-    <div>
+    <div className="refine-form">
       <form onSubmit={handleSubmit}>
         {mapParameters()}
         <button>Refine Search</button>

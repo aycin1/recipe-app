@@ -18,12 +18,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
-        <Header />
-        <Sidebar
-          formData={formData}
-          setFormData={setFormData}
-          setUrlParams={setUrlParams}
-        />
+        <div className="title-and-sidebar">
+          <Header />
+          <Sidebar
+            formData={formData}
+            setFormData={setFormData}
+            setUrlParams={setUrlParams}
+          />
+        </div>
         <RecipeList urlParams={urlParams} />
       </div>
     </BrowserRouter>

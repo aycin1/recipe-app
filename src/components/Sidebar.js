@@ -42,8 +42,8 @@ export default function Sidebar({ formData, setFormData, setUrlParams }) {
   }
 
   return (
-    <div>
-      <div className="sidebar">{setRefineOptions()}</div>
+    <div className="sidebar">
+      <div>{setRefineOptions()}</div>
       <div className="parameter">
         {parameterArr !== undefined && (
           <Parameter
